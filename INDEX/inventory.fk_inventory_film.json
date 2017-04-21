@@ -1,0 +1,27 @@
+{
+  "id" : "inventory.fk_inventory_film",
+  "name" : "fk_inventory_film",
+  "method" : "BTREE",
+  "unique" : false,
+  "type" : {
+    "table" : {
+      "ref" : {
+        "id" : "inventory",
+        "tableName" : "inventory",
+        "containerName" : "dev-med19"
+      },
+      "columns" : [ {
+        "ref" : {
+          "container" : "dev-med19",
+          "tableName" : "inventory",
+          "columnName" : "film_id"
+        },
+        "position" : 1
+      } ]
+    }
+  },
+  "properties" : {
+    "keyBlockSize" : 0,
+    "comment" : ""
+  }
+}

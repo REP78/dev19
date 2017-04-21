@@ -1,0 +1,84 @@
+{
+  "name" : "democomparesync",
+  "temporary" : false,
+  "constraints" : [ {
+    "name" : "PRIMARY",
+    "inline" : false,
+    "type" : {
+      "primaryKey" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "democomparesync",
+          "columnName" : "demo_id"
+        } ]
+      }
+    }
+  }, {
+    "inline" : true,
+    "type" : {
+      "notNull" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "democomparesync",
+          "columnName" : "demo_id"
+        } ]
+      }
+    }
+  } ],
+  "type" : {
+    "relational" : {
+      "columns" : [ {
+        "name" : "demo_id",
+        "properties" : {
+          "autoincrement" : true
+        },
+        "dataType" : {
+          "text" : "int(${0})",
+          "name" : "int",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "10"
+          } ]
+        }
+      }, {
+        "name" : "tracker",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "varchar(${0}) COLLATE ${1} CHARACTER SET ${2}",
+          "name" : "varchar",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "20"
+          }, {
+            "position" : 1,
+            "name" : "collation",
+            "value" : "latin1_swedish_ci"
+          }, {
+            "position" : 2,
+            "name" : "charset",
+            "value" : "latin1"
+          } ]
+        }
+      }, {
+        "name" : "set_date",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "date",
+          "name" : "date",
+          "params" : [ ]
+        }
+      } ]
+    }
+  },
+  "properties" : {
+    "engine" : "InnoDB",
+    "collate" : "latin1_swedish_ci",
+    "rowFormat" : "DEFAULT"
+  }
+}

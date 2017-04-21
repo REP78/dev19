@@ -1,0 +1,124 @@
+{
+  "name" : "demomoredata",
+  "temporary" : false,
+  "constraints" : [ {
+    "name" : "PRIMARY",
+    "inline" : false,
+    "type" : {
+      "primaryKey" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "demomoredata",
+          "columnName" : "demid"
+        } ]
+      }
+    }
+  }, {
+    "inline" : true,
+    "type" : {
+      "notNull" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "demomoredata",
+          "columnName" : "demid"
+        } ]
+      }
+    }
+  } ],
+  "type" : {
+    "relational" : {
+      "columns" : [ {
+        "name" : "demid",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "int(${0})",
+          "name" : "int",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "10"
+          } ]
+        }
+      }, {
+        "name" : "author",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "varchar(${0}) COLLATE ${1} CHARACTER SET ${2}",
+          "name" : "varchar",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "20"
+          }, {
+            "position" : 1,
+            "name" : "collation",
+            "value" : "latin1_swedish_ci"
+          }, {
+            "position" : 2,
+            "name" : "charset",
+            "value" : "latin1"
+          } ]
+        }
+      }, {
+        "name" : "myDate",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "date",
+          "name" : "date",
+          "params" : [ ]
+        }
+      }, {
+        "name" : "heaight",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "varchar(${0}) COLLATE ${1} CHARACTER SET ${2}",
+          "name" : "varchar",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "20"
+          }, {
+            "position" : 1,
+            "name" : "collation",
+            "value" : "latin1_swedish_ci"
+          }, {
+            "position" : 2,
+            "name" : "charset",
+            "value" : "latin1"
+          } ]
+        }
+      }, {
+        "name" : "distance",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "double(${0},${1})",
+          "name" : "double",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "4"
+          }, {
+            "position" : 1,
+            "name" : "decimals",
+            "value" : "2"
+          } ]
+        }
+      } ]
+    }
+  },
+  "properties" : {
+    "engine" : "InnoDB",
+    "collate" : "latin1_swedish_ci",
+    "rowFormat" : "DEFAULT"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id" : "inventory.fk_inventory_store",
+  "name" : "fk_inventory_store",
+  "method" : "BTREE",
+  "unique" : false,
+  "type" : {
+    "table" : {
+      "ref" : {
+        "id" : "inventory",
+        "tableName" : "inventory",
+        "containerName" : "dev-med19"
+      },
+      "columns" : [ {
+        "ref" : {
+          "container" : "dev-med19",
+          "tableName" : "inventory",
+          "columnName" : "store_id"
+        },
+        "position" : 1
+      } ]
+    }
+  },
+  "properties" : {
+    "keyBlockSize" : 0,
+    "comment" : ""
+  }
+}
