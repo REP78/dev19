@@ -1,0 +1,60 @@
+{
+  "name" : "demotablesync",
+  "temporary" : false,
+  "constraints" : [ {
+    "name" : "PRIMARY",
+    "inline" : false,
+    "type" : {
+      "primaryKey" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "demotablesync",
+          "columnName" : "demoID"
+        } ]
+      }
+    }
+  }, {
+    "inline" : true,
+    "type" : {
+      "notNull" : {
+        "columns" : [ {
+          "container" : "dev-med19",
+          "tableName" : "demotablesync",
+          "columnName" : "demoID"
+        } ]
+      }
+    }
+  } ],
+  "type" : {
+    "relational" : {
+      "columns" : [ {
+        "name" : "demoID",
+        "properties" : {
+          "autoincrement" : false
+        },
+        "dataType" : {
+          "text" : "varchar(${0}) COLLATE ${1} CHARACTER SET ${2}",
+          "name" : "varchar",
+          "params" : [ {
+            "position" : 0,
+            "name" : "length",
+            "value" : "20"
+          }, {
+            "position" : 1,
+            "name" : "collation",
+            "value" : "latin1_swedish_ci"
+          }, {
+            "position" : 2,
+            "name" : "charset",
+            "value" : "latin1"
+          } ]
+        }
+      } ]
+    }
+  },
+  "properties" : {
+    "engine" : "InnoDB",
+    "collate" : "latin1_swedish_ci",
+    "rowFormat" : "DEFAULT"
+  }
+}

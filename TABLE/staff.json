@@ -271,7 +271,7 @@
           "params" : [ {
             "position" : 0,
             "name" : "length",
-            "value" : "3"
+            "value" : "8"
           }, {
             "position" : 1,
             "name" : "signed",
